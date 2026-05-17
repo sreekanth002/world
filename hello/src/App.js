@@ -2,6 +2,9 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Loader from "./components/Loader";
 import Sree from "./pages/Sree";
+import May from "./pages/May";
+
+
 
 // Lazy loaded pages
 const Home = lazy(() => import("./pages/Home"));
@@ -20,6 +23,7 @@ const Settings = lazy(() => import("./pages/Settings"));
           <Link to="/settings">Settings</Link> |{" "}
           <hr />
           <Link to="/sree">Sree</Link>
+          <Link to="/may" >May</Link>
         </nav>
 
         <hr />
@@ -30,6 +34,7 @@ const Settings = lazy(() => import("./pages/Settings"));
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/sree"  element={<Sree />} />
+            <Route path="/may"  element={<May />} />
           </Routes>
         </Suspense>
       </div>
