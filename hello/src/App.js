@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Loader from "./components/Loader";
 import Sree from "./pages/Sree";
 import May from "./pages/May";
+import Oil from "./pages/Oil";
 
 
 
@@ -22,8 +23,9 @@ const Settings = lazy(() => import("./pages/Settings"));
           <Link to="/dashboard">Dashboard</Link> |{" "}
           <Link to="/settings">Settings</Link> |{" "}
           <hr />
-          <Link to="/sree">Sree</Link>
-          <Link to="/may" >May</Link>
+          <Link to="/sree">Sree</Link>|{" "}
+          <Link to="/may" >May</Link>|{" "}
+          <Link to="/oil" >OILLL</Link>|{" "}|{" "}
         </nav>
 
         <hr />
@@ -35,6 +37,7 @@ const Settings = lazy(() => import("./pages/Settings"));
             <Route path="/settings" element={<Settings />} />
             <Route path="/sree"  element={<Sree />} />
             <Route path="/may"  element={<May />} />
+            <Route path="/oil"  element={<Oil />} />
           </Routes>
         </Suspense>
       </div>
